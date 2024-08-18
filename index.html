@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbuns de Música</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        .description {
+            display: none;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .album-info {
+            margin-bottom: 20px;
+        }
+        .view-songs {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .view-songs:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NACIONAIS</h1>
+    </header>
+    <main>
+        <section class="albums">
+            <article class="album">
+                <img src="ASSETS/IMG/chorao.jfif" alt="Álbum 1">
+                <div class="album-info">
+                    <h2>Álbum: Reflexos e Emoções</h2>
+                    <button class="toggle-description">Mostrar Descrição</button>
+                    <p class="description">Mergulhe no universo emocionante de Chorão com "Reflexos e Emoções". Este álbum captura a essência crua e autêntica do artista, oferecendo uma seleção de músicas que vão desde baladas introspectivas até faixas enérgicas e vibrantes. Com letras que refletem suas vivências e sentimentos profundos, cada canção é uma janela para a alma do cantor. Prepare-se para uma viagem sonora que explora as complexidades da vida e da paixão.</p>
+                    <a href="chorao.html" class="view-songs">Ver Músicas</a>
+                </div>
+            </article>
+            <article class="album">
+                <img src="ASSETS/IMG/racionais.jfif" alt="Álbum 2">
+                <div class="album-info">
+                    <h2>Álbum: Vozes da Periferia</h2>
+                    <button class="toggle-description">Mostrar Descrição</button>
+                    <p class="description">"Vozes da Periferia" é um marco na discografia dos Racionais MC's, oferecendo um retrato poderoso e incisivo da realidade urbana. Com letras que abordam questões sociais, desigualdades e a vida nas comunidades, o álbum mistura beats envolventes com rimas contundentes e reflexivas. Cada faixa é uma história, uma análise crítica e uma celebração da resistência e da cultura periférica. Prepare-se para uma jornada musical que revela a voz dos que muitas vezes não são ouvidos.</p>
+                    <a href="racionais.html" class="view-songs">Ver Músicas</a>
+                </div>
+            </article>
+            <article class="album">
+                <img src="ASSETS/IMG/505e.jfif" alt="Álbum 3">
+                <div class="album-info">
+                    <h2>Álbum: O Coração da Quebrada</h2>
+                    <button class="toggle-description">Mostrar Descrição</button>
+                    <p class="description">"O Coração da Quebrada" é a mais nova explosão de energia e autenticidade da banda 509-E. Combinando ritmos contagiantes e letras que falam diretamente ao coração da vida nas periferias, o álbum traz uma mistura única de pagode e elementos do funk que define a identidade da banda. Cada música é uma celebração da cultura, da superação e da alegria encontrada nas pequenas coisas do dia a dia. Prepare-se para um som vibrante e uma mensagem que ressoa profundamente com todos que vivem e respiram a realidade da quebrada.</p>
+                    <a href="509e.html" class="view-songs"><button class = "toggle-description">Ver Músicas</button></a>
+                </div>
+            </article>
+            <!-- Adicione mais álbuns aqui -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Seu Nome</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.toggle-description').forEach(button => {
+            button.addEventListener('click', () => {
+                const description = button.nextElementSibling;
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    button.textContent = 'Ocultar Descrição';
+                } else {
+                    description.style.display = 'none';
+                    button.textContent = 'Mostrar Descrição';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
